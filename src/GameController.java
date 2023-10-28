@@ -10,50 +10,50 @@ public class GameController {
         Data.Mix();
         boolean playing = true;
         Scanner scan = new Scanner(System.in);
-        //Dealer.Hit(Data.getDeck();
-        // itt  mikor kiossza a lapokat mindenkinek!
-        //plyernek 2 kartya
+        System.out.println("0.Exit  1.Hit   2.Stand/Stay ");
         int command = scan.nextInt();
-        int Step;
-        Step = 1;
         while (playing){
 
 
             switch (command){
                 case 0:
-                    //Feladás
+//                    Feladás
                     playing = false;
                     System.out.println("Vesztettel!");
                     break;
                 case 1:
-                    //Hit
-                    //Lapkeres
-//                    System.out.println("Name: "+ player.getName()+" "+player.getCard().toString());
-                    Dealer.Hit(Data.getDeck());
-                    command = scan.nextInt();
+//                      Lapkeres    Hit
+                    player.AddCard(Dealer.Hit(Data.getDeck()));// kezebeadtuk a kartyat
+                    System.out.println("Pontszámod: "+player.getScore());
+                    System.out.println("Lapok a kezedben: "+player.CardNames());
 
+                    if (player.getScore() > 21){
+                        playing = false;
+                    }else {
+                        command = scan.nextInt();
+                    }
                     break;
 
 
 
                 case 2:
-                    //Stand/Stay
-                    //nem ker tobb lapot
+//                    Stand/Stay
                     System.out.println("gggggggggggg");
                     break;
                 case 10:
 
-                    System.out.println("test.....");
-                    player.AddCard(Dealer.Hit(Data.getDeck()));// kezebeadtuk a kartyat
-                    System.out.println(player.getCard());
-                     command = scan.nextInt();
                     break;
                 default:
-                    System.out.println("bla bla bla menu opciok...");
+                    System.out.println("0.Exit  1.Hit   2.Stand/Stay ");
                     command = scan.nextInt();
                     break;
 
             }
+        }
+        if (player.getScore() > 21){
+            System.out.println("Vesztettel!");
+        } else if (bot.getScore() > 21) {
+            System.out.println("Szépmunka, Nyertél!");
         }
     }
 }
