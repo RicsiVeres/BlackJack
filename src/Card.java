@@ -2,8 +2,6 @@ public class Card {
     private String name;
     private int value;
 
-
-
     private int quantity;
     public Card(String name, int value, int quantity) {
         this.name = name;

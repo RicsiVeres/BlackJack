@@ -17,19 +17,20 @@ public class GameController {
         int Step;
         Step = 1;
         while (playing){
-//            System.out.println(p);
 
-            System.out.println(player.getCard());
 
             switch (command){
                 case 0:
-                    //Surrender
-                    //Felad's
+                    //Feladás
+                    playing = false;
+                    System.out.println("Vesztettel!");
                     break;
                 case 1:
                     //Hit
                     //Lapkeres
-
+//                    System.out.println("Name: "+ player.getName()+" "+player.getCard().toString());
+                    Dealer.Hit(Data.getDeck());
+                    command = scan.nextInt();
 
                     break;
 
@@ -41,9 +42,10 @@ public class GameController {
                     System.out.println("gggggggggggg");
                     break;
                 case 10:
-                    System.out.println("valami muvelet...");
-                    System.out.println(Data.getDeck());
-                    command = scan.nextInt();
+                    System.out.println("test.....");
+                    player.AddCard(Dealer.Hit(Data.getDeck()));// kezebeadtuk a kartyat
+                    System.out.println(player.getCard());
+                     command = scan.nextInt();
                     break;
                 default:
                     System.out.println("bla bla bla menu opciok...");

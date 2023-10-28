@@ -21,7 +21,7 @@ public class Dealer {
             System.out.println(randomCard.getName()+"Elfogyott");
         }
         randomCard.setQuantity(-1);
-//
+
 //        if (!deck.isEmpty()) {
 //            System.out.println("Kihúzott kártya:");
 //            System.out.println("Név: " + randomCard.getName());
@@ -30,7 +30,7 @@ public class Dealer {
 //        } else {
 //            System.out.println("Nincs több kártya a pakliban.");
 //        }
-        System.out.println("KKKKKKKKKKKKKKKKKKKKKKKKK");
+//        System.out.println("KKKKKKKKKKKKKKKKKKKKKKKKK");
         return randomCard;
     }
 
