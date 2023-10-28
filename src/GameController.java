@@ -42,6 +42,7 @@ public class GameController {
                     System.out.println("gggggggggggg");
                     break;
                 case 10:
+
                     System.out.println("test.....");
                     player.AddCard(Dealer.Hit(Data.getDeck()));// kezebeadtuk a kartyat
                     System.out.println(player.getCard());
