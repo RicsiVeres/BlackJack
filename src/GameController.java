@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class GameController {
-    public void Play(){
+    public void Play(String playerName){
         Dealer Dealer = new Dealer();
         Data Data = new Data();
 
-        Player player = new Player("ricsi");
+        Player player = new Player(playerName);
         Player bot = new Player("Dealer");
         Data.Mix();
         boolean playing = true;
@@ -83,6 +83,10 @@ public class GameController {
                        System.out.println("Dontetlen");
                        playing = false;
                    }
+                    break;
+                case 3:
+                    // new Game
+
                     break;
                 default:
                     System.out.println(" ");

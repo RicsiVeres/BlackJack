@@ -1,13 +1,18 @@
 
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
 
         GameController gameController = new GameController();
-        gameController.Play();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Add meg a neved: ");
+        String name= scan.next();
+        System.out.println("Stop-Kilépés");
+        String command = scan.next();
+        while (command != "stop"){
+            gameController.Play(name);
+        }
 
     }
 
