@@ -30,7 +30,6 @@ public class Dealer {
 //        } else {
 //            System.out.println("Nincs több kártya a pakliban.");
 //        }
-        System.out.println("KKKKKKKKKKKKKKKKKKKKKKKKK");
         return randomCard;
     }
 

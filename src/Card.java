@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Card {
     private String name;
     private int value;
-
-
-
     private int quantity;
+
+
     public Card(String name, int value, int quantity) {
         this.name = name;
         this.value = value;
@@ -15,6 +17,9 @@ public class Card {
     }
     public int getValue() {
         return value;
+    }
+    public int setValue(int x) {
+        return value = x;
     }
     public int getQuantity() {
         return quantity;
