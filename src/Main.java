@@ -8,10 +8,16 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("Add meg a neved: ");
         String name= scan.next();
-        System.out.println("Stop-Kilépés");
-        String command = scan.next();
+        String command  = "";
+        System.out.println("A jatek elindult");
         while (command != "stop"){
+            System.out.println();
+            System.out.println();
             gameController.Play(name);
+            System.out.println();
+            System.out.println("Új játék kezdődött");
+            System.out.println();
+            System.out.println();
         }
 
     }

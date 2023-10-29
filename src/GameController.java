@@ -24,7 +24,7 @@ public class GameController {
         System.out.println("A pontszamod: "+ player.getScore());
         System.out.println("A kovetkezo kartyak vannak a kezedben: "+ player.GetCardNames());
         System.out.println(" ");
-        System.out.println("0.Exit  1.Hit  2.Stand/Stay");
+        System.out.println("0.Feladás  1.Hit  2.Stand/Stay");
         int command = scan.nextInt();
 
         while (playing){
@@ -44,7 +44,7 @@ public class GameController {
                     System.out.println("0.Exit  1.Hit  2.Stand/Stay");
 
                     if (bot.getScore() > 21 ){
-                        System.out.println("Nyertel");
+                        System.out.println("       Nyertel        ");
                         playing = false;
                         break;
                     } else if ( player.getScore() > 21 ) {
@@ -60,7 +60,7 @@ public class GameController {
                     int step = 0;
                     if (bot.getScore() > 16){
                         System.out.println(bot.getName() + "Kartyai: "+ bot.GetCardNames());
-                        System.out.println(bot.getName() + " Lapjai a kovetkezok: " + bot.GetCardNames());
+                        System.out.println(bot.getName() + " Lapjai a ponterteke: " + bot.getScore());
                     }
                    while (bot.getScore()<= 16) {
                        if ( step != 0){
@@ -74,7 +74,7 @@ public class GameController {
                        step++;
                    }
                    if (bot.getScore() > 21 || bot.getScore() < player.getScore()){
-                       System.out.println("Nyertel");
+                       System.out.println("       Nyertel        ");
                        playing = false;
                    } else if (bot.getScore() > player.getScore() || player.getScore() > 21 ) {
                        System.out.println("Vesztettel");
