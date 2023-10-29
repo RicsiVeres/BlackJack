@@ -58,6 +58,10 @@ public class GameController {
                 case 2:
                     //Stand/Stay
                     int step = 0;
+                    if (bot.getScore() > 16){
+                        System.out.println(bot.getName() + "Kartyai: "+ bot.GetCardNames());
+                        System.out.println(bot.getName() + " Lapjai a kovetkezok: " + bot.GetCardNames());
+                    }
                    while (bot.getScore()<= 16) {
                        if ( step != 0){
                            System.out.println();
@@ -74,6 +78,9 @@ public class GameController {
                        playing = false;
                    } else if (bot.getScore() > player.getScore() || player.getScore() > 21 ) {
                        System.out.println("Vesztettel");
+                       playing = false;
+                   } else if (bot.getScore() == player.getScore()) {
+                       System.out.println("Dontetlen");
                        playing = false;
                    }
                     break;
